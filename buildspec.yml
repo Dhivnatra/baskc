@@ -1,0 +1,20 @@
+Version: 0.2
+Phases:
+  install:
+    commands:
+      - echo "Installing node dependencies..."
+      - npm install
+  build:
+    commands:
+      - echo "Building Projects..."
+      - npm run build
+  post-build:
+    commands:
+      - echo "Zipping the package..."
+      - zip -r app.zip .
+      - echo "Uploading the artifact to S3...."
+      - aws s3 cp app.zip s3://bukda/  
+artifacts:
+  files:
+      - app.zip
+
