@@ -8,7 +8,7 @@ phases:
     commands:
       - echo "Building Projects..."
       - npm run build
-  post-build:
+  post_build:
     commands:
       - echo "Zipping the package..."
       - zip -r app.zip .
