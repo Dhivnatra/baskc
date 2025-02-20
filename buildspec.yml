@@ -1,5 +1,5 @@
 Version: 0.2
-Phases:
+phases:
   install:
     commands:
       - echo "Installing node dependencies..."
